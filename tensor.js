@@ -44,12 +44,11 @@
         // predict can take in an image, video or canvas html element
         const prediction = await model.predict(webcam.canvas);
         for (let i = 0; i < maxPredictions; i++) {
-            if(prediction[i].probability >0.85){
-            const classPrediction =
-                prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-            labelContainer.childNodes[i].innerHTML = classPrediction;
-           }// fim if prediction > 80
-           else
-           labelContainer.childNodes[i].innerHTML = "";
+            if(prediction[i].probability > 0.85) {
+                const classPrediction = prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+                labelContainer.childNodes[i].innerHTML = classPrediction;
+            } else {
+                labelContainer.childNodes[i].innerHTML = "";
+            }
         }
     }

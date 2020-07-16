@@ -1,3 +1,22 @@
-html {
-    height: 100%;
+#conteudo {
+    min-height: calc(100vh - 310px);
 }
+
+#home {
+    background-color: #000;
+}
+
+.link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.link:hover {
+    text-decoration: none;
+    color: #cecece;
+}
+
+/* #home {
+    margin-left: -15px;
+    margin-right: -15px;
+} */
